@@ -1,0 +1,66 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #555555
+    color: #4fc376;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #ba3737;
+    padding: 1dvh;
+    text-align: center;
+}
+
+header h1 {
+    margin: 10;
+}
+
+/* About */
+#about {
+    padding: 50px;
+    line-height: 2;
+}
+
+#about h2 {
+    color: #0056b3;
+}
+
+#about p {
+    color: #555555;
+}
+
+/* Contact Section Styling */
+#contact {
+    padding: 3dvh;
+    background-color: #c79898;
+}
+
+#contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+#contact li {
+    margin-bottom: 8dvh;
+}
+
+/* Button */
+button {
+    padding: 10px 20px;
+    background-color: #4a7baf;
+    color: rgb(176, 31, 159);
+    border: none;
+    border-radius: 17px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4fc376;
+    box-shadow: 0 4px 8px rgba(230, 106, 106, 0.2);
+}
