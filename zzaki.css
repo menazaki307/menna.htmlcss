@@ -1,0 +1,185 @@
+:root{
+  --paper:#f6f5f2;
+  --wall:#f0e8d2;
+  --trim:#163e2f; /* الرفوف/الحواف الداكنة */
+  --window-frame:#0c0c0c;
+  --glass1: #9fd8f0;
+  --glass2: #cceefc;
+  --shadow: rgba(0,0,0,0.15);
+}
+
+/* صفحة وخلفية بنقشة خفيفة (من CSS فقط) */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background:
+    radial-gradient( circle at 10% 10%, rgba(255,255,255,0.12) 0 2px, transparent 3px),
+    linear-gradient(90deg, #f7f7f7 0%, #efefef 100%);
+  background-size: 6px 6px, cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:40px;
+}
+
+/* المشهد (وسط الصفحة) */
+.scene{
+  width:360px;
+  max-width:90vw;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+}
+
+/* المبنى */
+.building{
+  width:260px;
+  background: linear-gradient(180deg, var(--wall) 0%, #efe6c9 100%);
+  border:6px solid rgba(0,0,0,0.75);
+  border-radius:6px;
+  position:relative;
+  box-shadow: 0 12px 30px var(--shadow), inset 0 8px 20px rgba(255,255,255,0.35);
+  padding:28px 18px 70px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+/* الرف العلوي والسفلي (الشريط الأخضر) */
+.ledge{
+  position:absolute;
+  left: -6px;
+  right: -6px;
+  height:18px;
+  background: linear-gradient(90deg, #2b5a48, #234736);
+  border:6px solid rgba(0,0,0,0.75);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.35);
+}
+.top-ledge{ top:-28px; border-bottom:none; border-top-left-radius:6px; border-top-right-radius:6px;}
+.bottom-ledge{ bottom:-28px; border-top:none; border-bottom-left-radius:6px; border-bottom-right-radius:6px}
+
+/* شبكة النوافذ */
+.windows{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+.row{
+  display:flex;
+  gap:14px;
+  justify-content:space-between;
+}
+.window{
+  width:64px;
+  height:64px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.2), rgba(255,255,255,0.02)),
+    linear-gradient(135deg, var(--glass1), var(--glass2));
+  border:6px solid var(--window-frame);
+  box-shadow: inset 0 -14px 20px rgba(0,0,0,0.12), 0 3px 0 rgba(0,0,0,0.6);
+  border-radius:4px;
+  position:relative;
+  overflow:hidden;
+}
+/* تأثير بريق زجاج */
+.window::after{
+  content:"";
+  position:absolute;
+  left:8px; top:6px;
+  width:18px; height:36px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.55), rgba(255,255,255,0.05));
+  transform: rotate(-18deg);
+  opacity:0.6;
+  filter: blur(0.6px);
+}
+
+/* المدخل */
+.entrance{
+  width:100%;
+  margin-top:18px;
+  position:relative;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  gap:10px;
+}
+
+/* رداء فوق المدخل */
+.entrance-ledge{
+  position:absolute;
+  top:-26px;
+  width:90%;
+  height:16px;
+  background: linear-gradient(90deg,#2b5a48,#234736);
+  border:6px solid rgba(0,0,0,0.75);
+  border-radius:4px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.35);
+}
+
+/* أعمدة اليمين واليسار */
+.columns{
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  padding:0 38px;
+  margin-top:6px;
+}
+.col{
+  width:10px;
+  height:56px;
+  background: linear-gradient(180deg,#d8caa9,#cbbf96);
+  border:4px solid rgba(0,0,0,0.6);
+  border-radius:2px;
+  box-shadow: inset 0 6px 12px rgba(0,0,0,0.08);
+}
+
+/* الباب الداخلي (زجاجي مزدوج) */
+.door{
+  width:140px;
+  height:68px;
+  display:flex;
+  gap:6px;
+  margin-top:6px;
+  z-index:2;
+}
+.glass-left, .glass-right{
+  flex:1;
+  border:6px solid rgba(0,0,0,0.8);
+  border-radius:4px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.01)),
+    linear-gradient(180deg, #8fd0ee, #bfeafc);
+  box-shadow: inset 0 -10px 16px rgba(0,0,0,0.12);
+  position:relative;
+}
+.glass-left::after, .glass-right::after{
+  content:"";
+  position:absolute;
+  left:8px; top:6px;
+  width:12px; height:30px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.02));
+  transform: rotate(-16deg);
+  opacity:0.6;
+}
+
+/* لمسات صغيرة */
+.building::before{
+  /* بقع بيضاء بسيطة لإحساس ورقي / بهتة */
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    radial-gradient(circle at 10% 20%, rgba(255,255,255,0.03) 0 2px, transparent 3px),
+    radial-gradient(circle at 80% 70%, rgba(0,0,0,0.02) 0 2px, transparent 3px);
+  pointer-events:none;
+}
+
+/* حجم أصغر على شاشات صغيرة */
+@media (max-width:420px){
+  .building{ width:220px; padding:20px 14px 60px;}
+  .window{ width:52px; height:52px; border-width:5px;}
+  .door{ width:120px; height:60px;}
+}

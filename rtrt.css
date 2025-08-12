@@ -1,0 +1,58 @@
+body{
+
+    margin: auto;
+
+}
+.base{
+
+    border: solid black;
+    width: 300px;
+    height: 400px;
+    background-color: antiquewhite;
+    margin: 50px;
+
+
+}
+.base{
+
+    display: flex;
+    margin: 50px;
+
+}
+
+.windows-container{
+
+    display: grid;
+    grid-template-columns: repeat(3,50px);
+    grid-template-rows: repeat(4,60px);
+    gap: 10px;
+    padding: 15px;
+
+}
+
+.windows{
+
+    border: solid black;
+    width: 40px;
+    height: 40px;
+    background-color: blueviolet(65,150,300);
+
+
+}
+
+.roof{
+
+    border: solid black;
+    width: 230px;
+    height: 200px;
+    position: absolute;
+    top: 450;
+    left: 30px;
+    border-radius: 5%;
+    background-color: aquamarine;
+
+ }
+
+
+
+
