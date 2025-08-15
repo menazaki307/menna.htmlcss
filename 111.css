@@ -1,0 +1,204 @@
+/* استيراد خطوط 'IBM Plex Sans Arabic' و 'Open Sans' من Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif; 
+    background-color: #f8f9fa;
+    color: #343a40;
+    padding: 20px;
+    text-align: right;
+    line-height: 1.7;
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start; 
+    min-height: 100vh;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+main {
+    width: 100%;
+    max-width: 750px; 
+    background-color: #ffffff; 
+    padding: 30px;
+    border-radius: 8px; 
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); 
+    direction: rtl; 
+    text-align: right;
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e9ecef; 
+}
+
+/* تنسيق عنوان H1 */
+h1 {
+    font-family: 'IBM Plex Sans Arabic', sans-serif; 
+    font-size: 2.8em; 
+    color: #495057; 
+    margin: 0;
+    font-weight: 700;
+    text-align: center; 
+}
+
+button {
+    background-color: #6c757d; 
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 17px;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+    border-radius: 5px; 
+    margin-bottom: 25px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: block;
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+    letter-spacing: 0.5px; 
+}
+
+button:hover {
+    background-color: #495057; 
+    transform: translateY(-1px); 
+}
+
+#basicOutput {
+    background-color: #fefefe; 
+    padding: 25px;
+    border-radius: 6px;
+    border: 1px solid #dee2e6; 
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+.success {
+    color: #155724; 
+    background-color: #d4edda; 
+    border: 1px solid #c3e6cb;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.05em;
+}
+
+.error {
+    color: #721c24;
+    background-color: #f8d7da; 
+    border: 1px solid #f5c6cb;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.05em;
+}
+
+h3 {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    color: #495057;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #ced4da; 
+    padding-bottom: 5px;
+    font-size: 1.4em;
+    font-weight: 700;
+}
+
+pre {
+    background-color: #e9ecef; 
+    padding: 15px;
+    border-radius: 4px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border: 1px solid #ced4da;
+    margin-bottom: 10px;
+    font-size: 0.95em;
+    direction: ltr; 
+    text-align: left; 
+    color: #495057;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+    margin: 30px 0;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    main {
+        padding: 25px;
+        border-radius: 6px;
+    }
+    h1 {
+        font-size: 2.4em;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+    #basicOutput {
+        padding: 20px;
+    }
+    .success, .error {
+        padding: 12px;
+        font-size: 1em;
+    }
+    h3 {
+        font-size: 1.3em;
+    }
+    pre {
+        font-size: 0.9em;
+    }
+    hr {
+        margin: 25px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    main {
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+    }
+    h1 {
+        font-size: 2em;
+    }
+    button {
+        padding: 8px 18px;
+        font-size: 15px;
+    }
+    #basicOutput {
+        padding: 15px;
+    }
+    .success, .error {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+    h3 {
+        font-size: 1.1em;
+    }
+    pre {
+        font-size: 0.8em;
+        padding: 10px;
+    }
+    hr {
+        margin: 20px 0;
+    }
+}

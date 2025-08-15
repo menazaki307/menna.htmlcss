@@ -1,0 +1,23 @@
+#gameArea {
+  width: 400px;
+  height: 500px;
+  border: 2px solid black;
+  position: relative;
+  overflow: hidden;
+}
+
+#ball {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+}
+
+#paddle {
+  width: 80px;
+  height: 10px;
+  background-color: blue;
+  position: absolute;
+  bottom: 0;
+}
